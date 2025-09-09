@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Science Department</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Computer Science Dept.</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Courses</a></li>
+          <li><a href="#projects">Research</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <img
+              id="modeToggle"
+              class="icon color-icon"
+              src="./assets/theme_light.png"
+              src-light="./assets/theme_light.png"
+              src-dark="./assets/theme_dark.png"
+              alt="Color theme icon"
+            />
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Computer Science Dept.</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Courses</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Research</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li>
+            <img
+              id="modeToggle2"
+              class="icon color-icon"
+              src="./assets/theme_light.png"
+              src-light="./assets/theme_light.png"
+              src-dark="./assets/theme_dark.png"
+              alt="Color theme icon"
+            />
+          </li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="assets/computer-science.jpg" alt="Department logo" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Welcome to the</p>
+        <h1 class="title">Computer Science Department</h1>
+        <p class="section__text__p2">Innovating Through Knowledge</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2">
+            Welcome 
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin_light.png"
+            src-light="./assets/linkedin_light.png"
+            src-dark="./assets/linkedin_dark.png"
+            alt="LinkedIn"
+            class="icon linkedin-icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+          <img
+            src="./assets/github_light.png"
+            src-light="./assets/github_light.png"
+            src-dark="./assets/github_dark.png"
+            alt="GitHub"
+            class="icon github-icon"
+            onclick="location.href='https://github.com/'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section__text__p1">Get To Know Us</p>
+      <h1 class="title">About Us</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="assets/computer-science.jpg"
+            alt="Department building"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience_light.png"
+                src-light="./assets/experience_light.png"
+                src-dark="./assets/experience_dark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Faculty Experience</h3>
+              <p>20+ Years <br />of Teaching and Research in Computer Science</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education_light.png"
+                src-light="./assets/education_light.png"
+                src-dark="./assets/education_dark.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Programs Offered</h3>
+              <p>B.Sc. Computer Science <br />M.Sc. Computer Science <br />Ph.D. Specializations</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              The Computer Science Department is committed to academic excellence and innovation. 
+              We provide students with a strong foundation in programming, software engineering, 
+              artificial intelligence, data science, and cybersecurity. 
+              Our mission is to prepare graduates who are equipped to solve real-world problems 
+              and make meaningful contributions to technology and society.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow_light.png"
+        src-light="./assets/arrow_light.png"
+        src-dark="./assets/arrow_dark.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+    <section id="experience">
+      <p class="section__text__p1">Explore Our</p>
+      <h1 class="title">Courses</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Undergraduate Courses</h2>
+            <div class="article-container">
+              <article>
+                <img src="assets/checkmark_light.png" class="icon" />
+                <div>
+                  <h3>Introduction to Programming</h3>
+                  <p>Core Module</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark_light.png" class="icon" />
+                <div>
+                  <h3>Data Structures & Algorithms</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark_light.png" class="icon" />
+                <div>
+                  <h3>Database Systems</h3>
+                  <p>Core Module</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark_light.png" class="icon" />
+                <div>
+                  <h3>Web Development</h3>
+                  <p>Practical</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Postgraduate Courses</h2>
+            <div class="article-container">
+              <article>
+                <img src="assets/checkmark_light.png" class="icon" />
+                <div>
+                  <h3>Artificial Intelligence</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark_light.png" class="icon" />
+                <div>
+                  <h3>Machine Learning</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark_light.png" class="icon" />
+                <div>
+                  <h3>Cybersecurity</h3>
+                  <p>Specialization</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark_light.png" class="icon" />
+                <div>
+                  <h3>Cloud Computing</h3>
+                  <p>Specialization</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow_light.png"
+        src-light="./assets/arrow_light.png"
+        src-dark="./assets/arrow_dark.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <!-- research section -->
+    <section id="projects">
+      <p class="section__text__p1">Browse Our</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="AI Research" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Tigo App</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn">Read More</button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-2.png" alt="Cybersecurity Research" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Blog App</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn">Read More</button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-3.png" alt="Data Science Research" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Food Menu App</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow_light.png"
+        src-light="./assets/arrow_light.png"
+        src-dark="./assets/arrow_dark.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <!-- contact Us section -->
+    <section id="contact">
+      <p class="section__text__p1">Reach Out</p>
+      <h1 class="title">Contact Us</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email_light.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:csdept@example.com">csdept@example.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin_light.png" alt="LinkedIn" class="icon linkedin-icon" />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- footer section -->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Courses</a></li>
+            <li><a href="#projects">Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Computer Science Department. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
