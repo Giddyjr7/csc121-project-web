@@ -1,311 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Science Department</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Computer Science Dept.</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Courses</a></li>
-          <li><a href="#projects">Research</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li>
-            <img
-              id="modeToggle"
-              class="icon color-icon"
-              src="./assets/theme_light.png"
-              src-light="./assets/theme_light.png"
-              src-dark="./assets/theme_dark.png"
-              alt="Color theme icon"
-            />
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Computer Science Dept.</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Courses</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Research</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          <li>
-            <img
-              id="modeToggle2"
-              class="icon color-icon"
-              src="./assets/theme_light.png"
-              src-light="./assets/theme_light.png"
-              src-dark="./assets/theme_dark.png"
-              alt="Color theme icon"
-            />
-          </li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="assets/computer-science.jpg" alt="Department logo" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Welcome to the</p>
-        <h1 class="title">Computer Science Department</h1>
-        <p class="section__text__p2">Innovating Through Knowledge</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2">
-            Welcome 
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin_light.png"
-            src-light="./assets/linkedin_light.png"
-            src-dark="./assets/linkedin_dark.png"
-            alt="LinkedIn"
-            class="icon linkedin-icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
-          <img
-            src="./assets/github_light.png"
-            src-light="./assets/github_light.png"
-            src-dark="./assets/github_dark.png"
-            alt="GitHub"
-            class="icon github-icon"
-            onclick="location.href='https://github.com/'"
-          />
-        </div>
-      </div>
-    </section>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
 
-    <section id="about">
-      <p class="section__text__p1">Get To Know Us</p>
-      <h1 class="title">About Us</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="assets/computer-science.jpg"
-            alt="Department building"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience_light.png"
-                src-light="./assets/experience_light.png"
-                src-dark="./assets/experience_dark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Faculty Experience</h3>
-              <p>20+ Years <br />of Teaching and Research in Computer Science</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <img src="/assets/faculty-logo.jpg" alt="logo" width="50px" height="50px">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="showPage('home')" data-page="home">Home</a></li>
+                <li><a href="#" onclick="showPage('about')" data-page="about">About</a></li>
+                <li><a href="#" onclick="showPage('courses')" data-page="courses">Courses</a></li>
+                <li><a href="#" onclick="showPage('research')" data-page="research">Research</a></li>
+                <li><a href="#" onclick="showPage('contact')" data-page="contact">Contact</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()">🌙</button></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div class="details-container">
-              <img
-                src="./assets/education_light.png"
-                src-light="./assets/education_light.png"
-                src-dark="./assets/education_dark.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Programs Offered</h3>
-              <p>B.Sc. Computer Science <br />M.Sc. Computer Science <br />Ph.D. Specializations</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              The Computer Science Department is committed to academic excellence and innovation. 
-              We provide students with a strong foundation in programming, software engineering, 
-              artificial intelligence, data science, and cybersecurity. 
-              Our mission is to prepare graduates who are equipped to solve real-world problems 
-              and make meaningful contributions to technology and society.
-            </p>
-          </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow_light.png"
-        src-light="./assets/arrow_light.png"
-        src-dark="./assets/arrow_dark.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
+    </nav>
 
-    <section id="experience">
-      <p class="section__text__p1">Explore Our</p>
-      <h1 class="title">Courses</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Undergraduate Courses</h2>
-            <div class="article-container">
-              <article>
-                <img src="assets/checkmark_light.png" class="icon" />
-                <div>
-                  <h3>Introduction to Programming</h3>
-                  <p>Core Module</p>
+    <!-- Home Page -->
+    <div class="page active" id="home">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Computer Science Department</h1>
+                <p>Innovating Through Knowledge • Shaping Tomorrow's Tech Leaders</p>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary" onclick="showPage('about')">Discover More</a>
+                    <a href="#" class="btn btn-secondary" onclick="showPage('contact')">Get in Touch</a>
                 </div>
-              </article>
-              <article>
-                <img src="assets/checkmark_light.png" class="icon" />
-                <div>
-                  <h3>Data Structures & Algorithms</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="assets/checkmark_light.png" class="icon" />
-                <div>
-                  <h3>Database Systems</h3>
-                  <p>Core Module</p>
-                </div>
-              </article>
-              <article>
-                <img src="assets/checkmark_light.png" class="icon" />
-                <div>
-                  <h3>Web Development</h3>
-                  <p>Practical</p>
-                </div>
-              </article>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Postgraduate Courses</h2>
-            <div class="article-container">
-              <article>
-                <img src="assets/checkmark_light.png" class="icon" />
-                <div>
-                  <h3>Artificial Intelligence</h3>
-                  <p>Advanced</p>
+        </section>
+
+        <div class="container">
+            <div class="stats">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3 data-count="500">0</h3>
+                        <p>Students Enrolled</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 data-count="15">0</h3>
+                        <p>Research Projects</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 data-count="95">0</h3>
+                        <p>Graduate Success Rate</p>
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img src="assets/checkmark_light.png" class="icon" />
-                <div>
-                  <h3>Machine Learning</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img src="assets/checkmark_light.png" class="icon" />
-                <div>
-                  <h3>Cybersecurity</h3>
-                  <p>Specialization</p>
-                </div>
-              </article>
-              <article>
-                <img src="assets/checkmark_light.png" class="icon" />
-                <div>
-                  <h3>Cloud Computing</h3>
-                  <p>Specialization</p>
-                </div>
-              </article>
             </div>
-          </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow_light.png"
-        src-light="./assets/arrow_light.png"
-        src-dark="./assets/arrow_dark.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <!-- research section -->
-    <section id="projects">
-      <p class="section__text__p1">Browse Our</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-1.png" alt="AI Research" class="project-img" />
+    </div>
+
+    <!-- About Page -->
+    <div class="page" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Our Department</h2>
+                <p>Excellence in Computer Science Education and Research</p>
             </div>
-            <h2 class="experience-sub-title project-title">Tigo App</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn">Read More</button>
+
+            <div class="card-grid">
+                <div class="card fade-in">
+                    <h3>Our Mission</h3>
+                    <p>To provide world-class education in computer science, fostering innovation, critical thinking, and ethical responsibility in our students while advancing the frontiers of computing research.</p>
+                </div>
+                <div class="card fade-in">
+                    <h3>Faculty Excellence</h3>
+                    <p>Our distinguished faculty brings 20+ years of combined experience in teaching and research, with expertise spanning AI, cybersecurity, software engineering, and data science.</p>
+                </div>
+                <div class="card fade-in">
+                    <h3>Modern Facilities</h3>
+                    <p>State-of-the-art computer labs, research facilities, and collaborative spaces equipped with the latest technology to support hands-on learning and innovation.</p>
+                </div>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-2.png" alt="Cybersecurity Research" class="project-img" />
+
+            <div class="card">
+                <h3>Programs Offered</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 1rem;">
+                    <div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">B.Sc. Computer Science</h4>
+                        <p>4-year undergraduate program covering fundamentals to advanced topics</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">M.Sc. Computer Science</h4>
+                        <p>2-year postgraduate program with specialization tracks</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Ph.D. Specializations</h4>
+                        <p>Research-focused doctoral programs in cutting-edge areas</p>
+                    </div>
+                </div>
             </div>
-            <h2 class="experience-sub-title project-title">Blog App</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn">Read More</button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-3.png" alt="Data Science Research" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Food Menu App</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn">Read More</button>
-            </div>
-          </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow_light.png"
-        src-light="./assets/arrow_light.png"
-        src-dark="./assets/arrow_dark.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <!-- contact Us section -->
-    <section id="contact">
-      <p class="section__text__p1">Reach Out</p>
-      <h1 class="title">Contact Us</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./assets/email_light.png" alt="Email icon" class="icon contact-icon email-icon" />
-          <p><a href="mailto:csdept@example.com">csdept@example.com</a></p>
+    </div>
+
+    <!-- Courses Page -->
+    <div class="page" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Courses</h2>
+                <p>Comprehensive curriculum designed for the modern tech industry</p>
+            </div>
+
+            <h3 style="margin: 2rem 0 1rem 0; color: var(--primary-color);">Undergraduate Courses</h3>
+            <div class="card-grid">
+                <div class="card course-card fade-in">
+                    <h3>Introduction to Programming</h3>
+                    <p>Master the fundamentals of programming using Python and Java. Learn problem-solving techniques and algorithmic thinking.</p>
+                    <span class="course-level">Core Module</span>
+                </div>
+                <div class="card course-card fade-in">
+                    <h3>Data Structures & Algorithms</h3>
+                    <p>Deep dive into efficient data organization and algorithm design. Essential for technical interviews and software development.</p>
+                    <span class="course-level">Intermediate</span>
+                </div>
+                <div class="card course-card fade-in">
+                    <h3>Database Systems</h3>
+                    <p>Learn database design, SQL, NoSQL, and modern data management techniques for scalable applications.</p>
+                    <span class="course-level">Core Module</span>
+                </div>
+                <div class="card course-card fade-in">
+                    <h3>Web Development</h3>
+                    <p>Full-stack web development including HTML5, CSS3, JavaScript, React, Node.js, and modern deployment practices.</p>
+                    <span class="course-level">Practical</span>
+                </div>
+            </div>
+
+            <h3 style="margin: 2rem 0 1rem 0; color: var(--primary-color);">Postgraduate Courses</h3>
+            <div class="card-grid">
+                <div class="card course-card fade-in">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Explore machine learning, deep learning, neural networks, and AI applications in various domains.</p>
+                    <span class="course-level">Advanced</span>
+                </div>
+                <div class="card course-card fade-in">
+                    <h3>Machine Learning</h3>
+                    <p>Advanced statistical learning methods, supervised and unsupervised learning, and practical ML implementation.</p>
+                    <span class="course-level">Advanced</span>
+                </div>
+                <div class="card course-card fade-in">
+                    <h3>Cybersecurity</h3>
+                    <p>Network security, cryptography, ethical hacking, and security policy development for modern organizations.</p>
+                    <span class="course-level">Specialization</span>
+                </div>
+                <div class="card course-card fade-in">
+                    <h3>Cloud Computing</h3>
+                    <p>AWS, Azure, containerization, microservices, and scalable cloud architecture design and deployment.</p>
+                    <span class="course-level">Specialization</span>
+                </div>
+            </div>
         </div>
-        <div class="contact-info-container">
-          <img src="./assets/linkedin_light.png" alt="LinkedIn" class="icon linkedin-icon" />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+    </div>
+
+    <!-- Research Page -->
+    <div class="page" id="research">
+        <div class="container">
+            <div class="section-header">
+                <h2>Research & Innovation</h2>
+                <p>Cutting-edge research projects and student innovations</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card fade-in">
+                    <div style="height: 200px; background: linear-gradient(45deg, #10b981 0%, #059669 100%); border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🤖</div>
+                    <h3>AI & Machine Learning Lab</h3>
+                    <p>Research in natural language processing, computer vision, and automated decision systems. Current projects include healthcare AI and smart city applications.</p>
+                    <button class="btn btn-primary" style="margin-top: 1rem;" onclick="showResearchDetails('ai')">Learn More</button>
+                </div>
+                <div class="card fade-in">
+                    <div style="height: 200px; background: linear-gradient(45deg, #22c55e 0%, #16a34a 100%); border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🔒</div>
+                    <h3>Cybersecurity Research</h3>
+                    <p>Advanced security protocols, blockchain technology, and threat detection systems. Collaborating with industry partners on real-world security challenges.</p>
+                    <button class="btn btn-primary" style="margin-top: 1rem;" onclick="showResearchDetails('security')">Learn More</button>
+                </div>
+                <div class="card fade-in">
+                    <div style="height: 200px; background: linear-gradient(45deg, #34d399 0%, #10b981 100%); border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📊</div>
+                    <h3>Data Science & Analytics</h3>
+                    <p>Big data processing, predictive analytics, and business intelligence solutions. Working on projects in finance, healthcare, and social media analysis.</p>
+                    <button class="btn btn-primary" style="margin-top: 1rem;" onclick="showResearchDetails('data')">Learn More</button>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 3rem;">
+                <h3>Student Projects</h3>
+                <p>Our students work on real-world projects that make a difference:</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 10px;">
+                        <h4>Smart Campus App</h4>
+                        <p>IoT-based campus navigation and resource management system</p>
+                    </div>
+                    <div style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 10px;">
+                        <h4>Health Monitor</h4>
+                        <p>AI-powered health tracking and early disease detection app</p>
+                    </div>
+                    <div style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 10px;">
+                        <h4>EduTech Platform</h4>
+                        <p>Personalized learning platform with adaptive content delivery</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <!-- footer section -->
+    </div>
+
+    <!-- Contact Page -->
+    <div class="page" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our department</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 1.5rem;">Send us a Message</h3>
+                    <form onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">I'm interested in</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Select an option</option>
+                                <option value="undergraduate">Undergraduate Programs</option>
+                                <option value="postgraduate">Postgraduate Programs</option>
+                                <option value="research">Research Opportunities</option>
+                                <option value="general">General Information</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="card">
+                        <h3>Department Information</h3>
+                        <div style="margin-top: 1rem;">
+                            <p><strong>Email:</strong> csdept@university.edu</p>
+                            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                            <p><strong>Office Hours:</strong> Mon-Fri 9:00 AM - 5:00 PM</p>
+                            <p><strong>Location:</strong> Computer Science Building, Room 301</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="margin-top: 1rem;">
+                        <h3>Quick Links</h3>
+                        <div style="margin-top: 1rem;">
+                            <p><a href="#" style="color: var(--primary-color); text-decoration: none;">📘 Student Handbook</a></p>
+                            <p><a href="#" style="color: var(--primary-color); text-decoration: none;">📅 Academic Calendar</a></p>
+                            <p><a href="#" style="color: var(--primary-color); text-decoration: none;">💼 Career Services</a></p>
+                            <p><a href="#" style="color: var(--primary-color); text-decoration: none;">🔗 Alumni Network</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Courses</a></li>
-            <li><a href="#projects">Research</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Computer Science Department. All Rights Reserved.</p>
+        <p>&copy; 2024 Computer Science Department. All Rights Reserved.</p>
+        <p>Building Tomorrow's Technology Leaders Today</p>
     </footer>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
